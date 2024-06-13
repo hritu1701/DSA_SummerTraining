@@ -34,7 +34,10 @@ int main()
     cout<<"Enter the element to search: ";
     cin>>item;
 
-    int ele= search(arr,size,item);
+    int pos= search(arr,size,item);
+
+     if(pos == -1) cout<<"\nItem is not Present";
+    else cout<<"\nItem found at index "<<pos;
  
 
     return 0;
