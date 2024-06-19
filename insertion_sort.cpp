@@ -1,22 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void selection_sort(int* arr,int size)
+void insertion_sort(int* arr, int size)
 {
-    for(int i=0; i< size-1; i++) 
+	for(int i=1; i<size; i++)
 	{
-		int min = i;
-		for(int j= i+1; j<size; j++)
-		   {
-		   	 if(arr[j] < arr[min]) 
-             min = j;
-		   }
-		if(i != min)
+		int key = arr[i];
+		int j = i-1;
+		while(j>=0)
 		{
-			int temp = arr[i];
-			arr[i] = arr[min];
-			arr[min] = temp;
+			if(arr[j] > key)
+			   arr[j+1] = arr[j];
+			else break;
 		}
+		arr[j+1] = key;
 	}
 }
 
@@ -33,7 +30,7 @@ int main()
         cin>>arr[i];
     }
 
-    selection_sort(arr,size);
+    insertion_sort(arr,size);
 
     cout<<"Array after sorting: ";
     for(int i=0;i<size;i++)
