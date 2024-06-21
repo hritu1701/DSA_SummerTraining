@@ -13,12 +13,12 @@ struct Contact
 
 Contact* phonebook = NULL;
 
-void insert_beg(string name, int contact)
+void insert_beg(string name, int number)
 {
 	Contact* nd = new Contact();
 	
 	nd->name = name;
-	nd->number = contact;
+	nd->number = number;
 	
 	if(phonebook == NULL)
 	{
@@ -43,12 +43,12 @@ void traverse()
 	}
 }
 
-void insert_end(string name, int contact)
+void insert_end(string name, int number)
 {
 	Contact* nd = new Contact();
 	
 	nd->name = name;
-	nd->number = contact;
+	nd->number = number;
 	
 	if(phonebook == NULL)
 	{
