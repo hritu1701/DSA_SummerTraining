@@ -1,6 +1,8 @@
 // Linked list to store contact
 
-#include<bits/stdc++.h>
+// #include<bits/stdc++.h>
+
+#include<iostream>
 #include<string.h>
 using namespace std;
 
