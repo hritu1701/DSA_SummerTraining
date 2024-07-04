@@ -11,7 +11,7 @@ void enque(int item)
     if((front==rear+1) || (front==0 && rear == n-1))
     cout<<"Sorry! Queue is full";
 
-    else if(front =-1) //Queue is empty
+    else if(front =-1) // Queue is empty
     {
         front++;rear++;
         Queue[rear]=item;
